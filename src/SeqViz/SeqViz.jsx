@@ -236,8 +236,8 @@ export default class SeqViz extends React.Component {
 
   render() {
     const { viewer } = this.props;
-    let { annotations, compSeq, name, seq } = this.props;
-    const { part } = this.state;
+    let { compSeq, name, seq } = this.props;
+    let { annotations, part } = this.state;
 
     // part is either from a file/accession, or each prop was set
     seq = seq || part.seq || "";
