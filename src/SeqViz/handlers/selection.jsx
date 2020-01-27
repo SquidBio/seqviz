@@ -329,7 +329,7 @@ const withSelectionHandler = WrappedComp =>
       const percFromLeft = distFromLeft / adjustedWidth;
       const bpsFromLeft = Math.round(percFromLeft * bpsPerBlock);
 
-      const currBase = knownRange.start + bpsFromLeft;
+      const currBase = Math.min(knownRange.start + bpsFromLeft, knownRange.end);
 
       return currBase;
     };
